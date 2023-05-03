@@ -5,7 +5,6 @@ add_executable("CmakeHelloWorld" "main.cpp")
 
 
 
-
 project("Second_Project")
 add_executable("Second_Project" "main2.cpp")
 
