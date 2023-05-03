@@ -1,0 +1,69 @@
+cmake_minimum_required(VERSION 3.13)
+add_subdirectory("thirdParty/profilerLib")
+
+
+project(main1)
+#set(CMAKE_CXX_STANDARD 17)
+add_executable(main1 "src/main.cpp")
+target_include_directories(main1 PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(main1 PRIVATE profilerLib)
+
+project(main2)
+#set(CMAKE_CXX_STANDARD 17)
+add_executable(main2 "src/main2.cpp")
+target_include_directories(main2 PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(main2 PRIVATE profilerLib)
+
+project(main3)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(main3 "src/main3.cpp")
+target_include_directories(main3 PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(main3 PRIVATE profilerLib)
+
+project(point)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(point "src/point.cpp")
+target_include_directories(point PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(point PRIVATE profilerLib)
+
+project(orientare)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(orientare "src/testOrientare.cpp")
+target_include_directories(orientare PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(orientare PRIVATE profilerLib)
+
+
+project(monotonie)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(monotonie "src/monotonie.cpp")
+target_include_directories(monotonie PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(monotonie PRIVATE profilerLib)
+
+project(centruCircumscris)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(centruCircumscris "src/centruCircumscris.cpp")
+target_include_directories(centruCircumscris PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(centruCircumscris PRIVATE profilerLib)
+
+project(triangulari)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(triangulari "src/triangulari.cpp")
+target_include_directories(triangulari PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(triangulari PRIVATE profilerLib)
+
+project(main4)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(main4 "src/main4.cpp" "include/magic_enum.hpp")
+target_include_directories(main4 PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(main4 PRIVATE profilerLib)
+
+project(par)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(par "src/par.cpp")
+target_include_directories(par PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(par PRIVATE profilerLib)
+
+project(plane)
+add_executable(plane "src/plane.c")
+target_include_directories(plane PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+target_link_libraries(plane PRIVATE profilerLib)
