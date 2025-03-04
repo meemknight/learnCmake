@@ -6,9 +6,7 @@ add_library(profilerLib INTERFACE)
 target_include_directories(profilerLib INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}")
 
 
-#Define MY_SOURCES to be a list of all the source files for my game 
-file(GLOB_RECURSE PROFILER_LIB_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 add_executable(profilerLib_test)
-target_sources(profilerLib_test PRIVATE ${PROFILER_LIB_SOURCES} )
+target_sources(profilerLib_test PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp" )
 target_link_libraries(profilerLib_test PUBLIC profilerLib)
 
