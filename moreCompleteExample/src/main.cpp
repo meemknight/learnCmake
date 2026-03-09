@@ -2,6 +2,8 @@
 #include <myHeader.h>
 #include <fstream>
 
+#include <headers/header.h>
+
 int main()
 {
 	
@@ -19,3 +21,5 @@ int main()
 	std::cin.get();
 	return 0;
 }
+
+
